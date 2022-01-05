@@ -1,0 +1,480 @@
+/* html{
+    box-sizing: border-box;
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
+} */
+
+/* primary text color grey #757575 */
+/* secondary text color black #212121 */
+/* white text color #fff */
+/* accent color #2196F3 */
+/* primary bg color  #fff */
+/* secondary bg color #F5F4FA */
+/* footer bg color #2F303A */
+/* stroke portfolio works #EEEEEE */
+/* stroke header #ECECEC */
+
+:root {
+    --primary-txt-col: #757575;
+    --secondary-txt-col: #212121;
+    --white-txt-col: #fff;
+    --accent-col: #2196f3;
+    --primary-bg-col: #fff;
+    --secondary-bg-col: #f5f4fa;
+    --footer-bg-col: #2f303a;
+    --gap: 30px;
+    --stroke-portfolio: #EEEEEE;
+    --stroke-header: #ECECEC;
+}
+
+/* index.html */
+body {
+    font-family: roboto, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--primary-txt-col);
+    background-color: var(--primary-bg-col);
+    letter-spacing: 0.03em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul{
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+/* logotype style */
+.logo {
+    font-family: raleway;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--secondary-txt-col);
+    text-decoration: none;
+    line-height: 1.17;
+
+    margin-right: 93px;
+}
+
+.logoblue {
+    color: var(--accent-col);
+}
+
+/* site nav and header contacts*/
+
+.container {
+    width: 1230px;
+    padding: 0 15px;
+    margin: 0 auto;
+
+    /* outline: solid 2px tomato; */
+}
+
+.page-header {
+    border-bottom: 2px solid var(--stroke-header);
+}
+
+.headerbox, .main-nav{
+    display: flex;
+    align-items: center;
+}
+
+.site-nav,
+.header-contacts {
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    font-weight: 500;
+
+    list-style: none;
+
+    display: flex;
+}
+
+.site-nav-item:not(:last-child) {
+    margin-right: 50px;
+    /* background-color: tomato; */
+}
+
+.header-contacts{
+    margin-left: auto;
+}
+
+.header-contacts-item + .header-contacts-item {
+    margin-left: 50px;
+    /* background-color: tomato; */
+}
+
+.site-nav a {
+    color: var(--secondary-txt-col);
+    text-decoration: none;
+    display:block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.header-contacts a {
+    color: var(--primary-txt-col);
+    text-decoration: none;
+    display:block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.site-nav a:hover,
+.site-nav a:focus,
+.header-contacts a:hover,
+.header-contacts a:focus {
+    color: var(--accent-col);
+}
+
+.site-nav .link-current {
+    color: var(--accent-col);
+}
+
+
+
+
+
+
+
+
+/* hero+button */
+/* Залит темный фон, чтобы были видны буквы */
+
+.hero {
+    text-align: center;
+}
+
+.hero-title {
+    background-color: #2F303A;
+
+    font-weight: 900;
+    font-size: 44px;
+    color: var(--white-txt-col);
+    text-transform: uppercase;
+    line-height: 1.36;
+
+    letter-spacing: 0.06em;
+
+    margin: 0 auto 28px auto;
+
+}
+
+.button-hero {
+    cursor: pointer;
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+
+    letter-spacing: 0.06em;
+    border-radius: 4px;
+
+    border-style: none;
+    border-color: none;
+
+    background-color: var(--accent-col);
+    color: var(--white-txt-col);
+
+    padding: 10px 32px;
+    min-width: 200px;
+    height: 50px;
+    text-align: center;
+
+}
+
+
+/* преимущества */
+/* ДЛЯ ВСЕХ СЕКЦИЙ МОЖНО ЗАДАТЬ СРЕДНЕЕ ЗНАЧЕНИЕ Паддинг? */
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.features-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(-1 * var(--gap));
+}
+
+.features-list-item {
+    list-style: none;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+
+    padding: 0;
+
+    /* outline: 1px solid teal; */
+
+    flex-basis: calc(100%/4 - var(--gap));
+    margin-left: var(--gap);
+}
+
+.features-list .title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    color: var(--secondary-txt-col);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+
+    margin: 0 0 10px 0;
+}
+
+
+/* Чем мы занимаемся */
+
+img {
+    display: block;
+    width: 100%;
+}
+
+.whatwedo-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(-1 * var(--gap));
+
+}
+
+.whatwedo-list-item {
+    padding: 0;
+    list-style: none;
+
+    /* outline: 1px solid teal; */
+
+    flex-basis: calc(100%/3 - var(--gap));
+    margin-left: var(--gap);
+}
+
+/* Наша команда */
+
+.section:nth-child(5) {
+    background-color: var(--secondary-bg-col);
+}
+
+.section-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    color: var(--secondary-txt-col);
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    margin-bottom: 50px;
+}
+
+.coworkers-list .title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.17;
+    color: var(--secondary-txt-col);
+
+    margin-bottom: 10px;
+}
+
+.coworkers-list {
+    list-style: none;
+    line-height: 1.17;
+
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(-1 * var(--gap));
+}
+
+.img-coworkers{
+    margin-bottom: 30px;
+}
+.coworkers-list-item {
+
+    /* outline: 1px solid teal; */
+
+    flex-basis: calc(100% / 4 - var(--gap));
+    margin-left: var(--gap);
+
+    text-align: center;
+
+    background: #FFFFFF;
+
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+}
+
+.coworkers-list-item p{
+    margin-bottom: 30px;
+}
+
+/* футер */
+/* Залит темный фон, чтобы были видны буквы */
+.section-footer {
+    background-color: #2f303a;
+}
+
+.logowhite {
+    font-family: raleway;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--white-txt-col);
+    text-decoration: none;
+    line-height: 1.17;
+
+    margin-bottom:20px;
+    display: block
+}
+
+.address-cont {
+    list-style: none;
+    line-height: 1.7;
+}
+
+.address a {
+    text-decoration: none;
+    color: var(--white-txt-col);
+    font-style: normal;
+    line-height: 1.7;
+    display:block;
+    margin-bottom: 9px;
+}
+
+.address-cont a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.6);
+    display: block;
+    margin-bottom: 9px;
+
+}
+
+.address a:hover,
+.address a:focus,
+.address-cont a:hover,
+.address-cont a:focus {
+    color: var(--accent-col);
+}
+
+
+/* portfolio html */
+
+.button-portfolio:hover,
+.button-portfolio:focus {
+    background-color: var(--accent-col);
+    color: var(--white-txt-col);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+        0px 1px 2px rgba(0, 0, 0, 0.08),
+        0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.button-portfolio {
+    cursor: pointer;
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+
+    letter-spacing: 0.03em;
+    border-radius: 4px;
+
+    border-style: none;
+    border-color: none;
+
+    background-color: var(--secondary-bg-col);
+    color: var(--secondary-txt-col);
+
+    padding: 6px 22px;
+        
+    
+}
+
+.button-list {
+    margin-bottom: 50px;
+    
+
+    list-style: none;
+
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -8px;
+    min-width: 73px;
+    
+}
+
+.buttons{
+    display:flex;  
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button-list-item {
+    /* outline: 1px solid teal; */
+
+    flex-basis: calc(100% / 5 - 8px);
+    margin-left: 8px;    
+}
+
+/* примеры работ */
+
+
+.example-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-left: calc(-1 * var(--gap));
+    margin-bottom: calc(-1 * var(--gap));
+
+}
+
+.ex-list-item {
+    list-style: none;
+    flex-basis: calc(100% / 3 - var(--gap));
+
+    margin-left: var(--gap);
+    margin-bottom: var(--gap);
+
+    list-style: none;
+
+    background: var(--primary-bg-col);
+    border: 1px solid var(--stroke-portfolio);
+
+}
+
+.example-list a {
+    text-decoration: none;
+}
+
+.imgthumb {
+    margin-bottom: 20px;
+}
+
+.example-list .title {
+    margin-block-start: 0;
+    margin-block-end: 0;
+
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    color: var(--secondary-txt-col);
+    letter-spacing: 0.06em;
+
+    margin-bottom: 4px;
+}
+
+.example-list p {
+    font-size: 16px;
+    line-height: 1.86;
+    color: var(--primary-txt-col);
+
+    margin-bottom: 20px;
+}
+
+

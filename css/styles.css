@@ -15,6 +15,7 @@
 /* footer bg color #2F303A */
 /* stroke portfolio works #EEEEEE */
 /* stroke header #ECECEC */
+/* hero bg color C4C4C4 */
 
 :root {
     --primary-txt-col: #757575;
@@ -27,6 +28,7 @@
     --gap: 30px;
     --stroke-portfolio: #EEEEEE;
     --stroke-header: #ECECEC;
+    --hero-bg-color: #C4C4C4;
 }
 
 /* index.html */
@@ -151,11 +153,12 @@ ul{
 
 .hero {
     text-align: center;
+    background-color: var(--hero-bg-color);
+    background-image: url(../images/Hero-pic.jpg);
 }
 
 .hero-title {
-    background-color: #2F303A;
-
+    
     font-weight: 900;
     font-size: 44px;
     color: var(--white-txt-col);

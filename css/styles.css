@@ -78,7 +78,7 @@ img {
 /* site nav and header contacts*/
 
 .container {
-    width: 1230px;
+    width: 1200px;
     padding: 0 15px;
     margin: 0 auto;
 }
@@ -264,11 +264,14 @@ img {
 
     background-color: var(--secondary-bg-col);
     background-repeat: no-repeat;
+    background-position: center;
     background-size: contain;
+
+    
 }
 
-.features-list-item .antenna::before{
-    background-image: url(../images/features1.svg);
+.icon-antenna::before{
+    background-image: url('../images/antenna.svg');
 }
 
 .features-list-item-content {

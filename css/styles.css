@@ -431,7 +431,7 @@ img {
     border-width: 1px;
     border-style: solid;
     border-color:  var(--fill-colour);
-    border-radius: 20px;
+    border-radius:4px;
     width: 170px;
     height: 92px;
 

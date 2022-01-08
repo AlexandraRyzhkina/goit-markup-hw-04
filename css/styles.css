@@ -34,6 +34,7 @@
 }
 
 /* index.html */
+
 body {
     font-family: roboto, sans-serif;
     font-size: 14px;
@@ -60,8 +61,14 @@ img {
     display: block;
     width: 100%;
 }
+.container {
+    width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
 
 /* logotype style */
+
 .logo {
     font-family: raleway;
     font-size: 26px;
@@ -78,12 +85,6 @@ img {
 }
 
 /* site nav and header contacts*/
-
-.container {
-    width: 1200px;
-    padding: 0 15px;
-    margin: 0 auto;
-}
 
 .page-header {
     border-bottom: 2px solid var(--stroke-header);
@@ -122,10 +123,9 @@ img {
 .site-nav-item>.link {
     color: var(--secondary-txt-col);
     text-decoration: none;
-    display: block;
+    display: flex;
     padding-top: 32px;
     padding-bottom: 32px;
-
 }
 
 .header-contacts-item>.link {
@@ -134,7 +134,6 @@ img {
     display: flex;
     padding-top: 32px;
     padding-bottom: 32px;
-
 }
 
 .site-nav-item .link:hover,
@@ -142,8 +141,6 @@ img {
 .header-contacts-item>.link:hover,
 .header-contacts-item>.link:focus {
     color: var(--accent-col);
-
-
 }
 
 .link.current {
@@ -173,7 +170,6 @@ img {
     margin-right: auto;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
         url('../images/Hero-pic.jpg');
-
     text-align: center;
     padding-top: 200px;
     padding-bottom: 200px;
@@ -211,12 +207,10 @@ img {
     min-width: 200px;
     height: 50px;
     text-align: center;
-
 }
 
-
 /* преимущества */
-/* ДЛЯ ВСЕХ СЕКЦИЙ МОЖНО ЗАДАТЬ СРЕДНЕЕ ЗНАЧЕНИЕ Паддинг? */
+
 .section {
     padding-top: 94px;
     padding-bottom: 94px;
@@ -239,7 +233,6 @@ img {
 
     padding: 0;
 
-    /* outline: 1px solid teal; */
     width: 270px;
     flex-basis: calc(100%/4 - var(--gap));
     margin-left: var(--gap);
@@ -273,7 +266,6 @@ img {
     background-image: url('../images/astronaut.svg');
 }
 
-
 .features-list-item-content {
     padding-top: 30px;
 }
@@ -292,20 +284,15 @@ img {
 
 /* Чем мы занимаемся */
 
-
-
 .whatwedo-list {
     display: flex;
     flex-wrap: wrap;
     margin-left: calc(-1 * var(--gap));
-
 }
 
 .whatwedo-list-item {
     padding: 0;
     list-style: none;
-
-    /* outline: 1px solid teal; */
 
     flex-basis: calc(100%/3 - var(--gap));
     margin-left: var(--gap);
@@ -313,8 +300,9 @@ img {
 
 /* Наша команда */
 
-.section:nth-child(4) {
+.section-cow {
     background-color: var(--secondary-bg-col);
+    padding-bottom: 94px;
 }
 
 .section-title {
@@ -379,7 +367,6 @@ img {
     padding-top: 16px;
     margin-left: 32px;
     margin-right: 32px;
-
 }
 
 .coworkers-item-social+.coworkers-item-social {
@@ -465,10 +452,16 @@ img {
 
 /* футер */
 /* Залит темный фон, чтобы были видны буквы */
+
 .section-footer {
     background-color: #2f303a;
     padding-top: 60px;
     padding-bottom: 60px;
+}
+
+.footer-all {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .logowhite {
@@ -480,7 +473,7 @@ img {
     line-height: 1.17;
 
     margin-bottom: 20px;
-    display: block
+    display: block;
 }
 
 .address-cont {
@@ -488,29 +481,64 @@ img {
     line-height: 1.7;
 }
 
-.address a {
+.address .link-address {
     text-decoration: none;
     color: var(--white-txt-col);
     font-style: normal;
     line-height: 1.7;
+
     display: block;
     margin-bottom: 9px;
 }
 
-.address-cont a {
+.address-cont .link-mail, 
+.address-cont .link-call {
     text-decoration: none;
     color: rgba(255, 255, 255, 0.6);
     display: block;
     margin-bottom: 9px;
+    font-style: normal;
 
 }
 
-.address a:hover,
-.address a:focus,
-.address-cont a:hover,
-.address-cont a:focus {
-    color: var(--accent-col);
+.footer-social {
+    margin-left: 70px;
+    padding-top: 12px;
+
 }
+.footer-heading{
+    
+    text-transform: uppercase;
+    color: var(--primary-bg-col);
+    font-size: 14px;
+    line-height: 1.14;
+    
+    
+
+}
+.footer-list-item-social{
+    list-style: none;
+    text-decoration: none;
+
+    padding-top: 20px;
+    align-items: start;
+   
+}
+
+.footer-item-social{
+    display: inline-flex; 
+}
+
+.footer-item-social> .link-social{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-item-social:hover{
+    background-color: var(--accent-col);
+    border-radius: 50px;
+}
+
+
 
 
 /* portfolio html */
@@ -561,14 +589,11 @@ img {
 }
 
 .button-list-item {
-    /* outline: 1px solid teal; */
-
     flex-basis: calc(100% / 5 - 8px);
     margin-left: 8px;
 }
 
 /* примеры работ */
-
 
 .example-list {
     display: flex;
@@ -590,10 +615,9 @@ img {
 
     background: var(--primary-bg-col);
 
-
 }
 
-.example-list a {
+.card-content {
     text-decoration: none;
 }
 

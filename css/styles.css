@@ -159,7 +159,9 @@ img {
 }
 
 .link:hover .email,
-.link:hover .phone {
+.link:hover .phone,
+.link:focus .email,
+.link:focus .phone {
     fill: var(--accent-col);
 }
 
@@ -306,6 +308,7 @@ img {
 .section-cow {
     background-color: var(--secondary-bg-col);
     padding-bottom: 94px;
+    padding-top: 94px;
 }
 
 .section-title {
@@ -326,7 +329,7 @@ img {
 
     text-align: center;
 
-    background: #FFFFFF;
+    background: var(--white-txt-col);
 
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
         0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -402,12 +405,17 @@ img {
 .link-social:hover .instagram,
 .link-social:hover .twitter,
 .link-social:hover .facebook,
-.link-social:hover .linkedin {
+.link-social:hover .linkedin,
+.link-social:focus .instagram,
+.link-social:focus .twitter,
+.link-social:focus .facebook,
+.link-social:focus .linkedin {
     fill: var(--white-txt-col);
     background-color: var(--accent-col);
 }
 
-.link-social:hover{
+.link-social:hover,
+.link-social:focus{
     background-color: var(--accent-col);
 }
 
@@ -447,7 +455,9 @@ img {
 }
 
 .link-client:hover,
-.link-client:hover .icon-client{
+.link-client:hover .icon-client,
+.link-client:focus,
+.link-client:focus .icon-client {
     fill: var(--accent-col);
     border-color: var(--accent-col);
 }
@@ -515,35 +525,35 @@ img {
     color: var(--white-txt-col);
     font-size: 14px;
     line-height: 1.14;
-    
-    
-
 }
+
 .footer-list-item-social{
     list-style: none;
     text-decoration: none;
 
-    padding-top: 20px;
-    align-items: start;
-   
+    padding-top: 20px;  
 }
 
 .footer-item-social{
     display: inline-flex; 
+    border-radius: 50px;
+
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-item-social+.footer-item-social{
+    margin-left: 10px;
 }
 
 .footer-item-social> .link-social{
-    background-color: rgba(255, 255, 255, 0.1);
     fill: var(--primary-bg-col);
 }
 
-.footer-item-social:hover{
+.footer-item-social:hover,
+.footer-item-social:focus{
     background-color: var(--accent-col);
-    border-radius: 50px;
+    
 }
-
-
-
 
 /* portfolio html */
 
@@ -624,7 +634,8 @@ img {
     display: block;
 
 }
-.portfolio-hover:hover{
+.portfolio-hover:hover,
+.portfolio-hover:focus{
 box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
     0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);

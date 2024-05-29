@@ -329,8 +329,6 @@ img {
 
 .icon-antenna {
   display: block;
-  width: 64px;
-  height: 64px;
 }
 
 /* section our team */
@@ -500,12 +498,18 @@ img {
   display: flex;
 }
 
-.footer-social {
-  margin-left: 120px;
+.footer-first-column {
+  margin-right: 120px;
 }
 
 .footer-social-title {
   margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+
 }
 
 .footer-social-list {
@@ -514,23 +518,36 @@ img {
   gap: 16px;
 }
 
-.footer-social-link {
+.footer-social-item {
   display: block;
   width: 40px;
   height: 40px;
-  background-color: var(--team-social-link-color);
-  border-radius: 50%;
+  
 
   display: flex;
 
-  justify-content: center;
+  
+}
+
+.footer-social-link{
+width: 100%;
+height: 100%;
+background-color: var(--team-social-link-color);
+border-radius: 50%;
+
+display: flex;
+
+justify-content: center;
   align-items: center;
 }
 
+.footer-social-link:hover, .footer-social-link:focus{
+  background-color: #31d0aa;
+}
+
 .footer-social-icon {
-  width: 24px;
-  height: 24px;
-  fill: var(--team-social-fill);
+
+  fill: var(--logo-studio-footer);
   background-repeat: no-repeat;
 
   justify-content: center;

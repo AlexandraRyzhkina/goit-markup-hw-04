@@ -145,6 +145,7 @@ img {
 
 .page-header {
   border-bottom: 1px solid var(--header-underline);
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .nav-link {
@@ -156,8 +157,7 @@ img {
 
   position: relative;
 
-  transition-property: color;
-  transition-duration: 250ms;
+ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link.current::after {
@@ -170,11 +170,12 @@ img {
   width: 100%;
   height: 4px;
 
-  background-color: var(--button-iris);
+  background-color: var(--header-hover-color);
 }
 
 .nav-link.current {
-  color: var(--button-iris);
+  color: var(--header-hover-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .auth-link {
@@ -183,8 +184,7 @@ img {
 
   color: var(--auth-link-color);
 
-  transition-property: color;
-  transition-duration: 250ms;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link:hover,
@@ -245,6 +245,11 @@ img {
 
   margin-left: auto;
   margin-right: auto;
+
+  background-repeat: no-repeat;
+  background-position: center; 
+  background-size: cover; 
+
 }
 
 .title.hero {
@@ -286,6 +291,8 @@ img {
   cursor: pointer;
 
   margin: 0 auto;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* section features */
@@ -377,6 +384,12 @@ img {
 
   justify-content: center;
   align-items: center;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+}
+
+.team-social-link:hover, .team-social-link:focus{
+  background-color: #404bbf
 }
 
 .team-social-icon {
@@ -402,6 +415,8 @@ img {
 .portfolio-item {
   width: calc((100% - 48px) / 3);
   cursor: pointer;
+
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
 .portfolio-text {
@@ -440,9 +455,7 @@ img {
   background: #4d5ae5;
 
   color: #f4f4fd;
-  padding-top: 40px;
-  padding-right: 32px;
-  padding-left: 32px;
+  padding: 40px 32px;
 }
 
 .portfolio-item:hover .portfolio-overlay {

@@ -496,6 +496,7 @@ img {
 
 .footer-flex {
   display: flex;
+  align-items: baseline;
 }
 
 .footer-first-column {
@@ -525,7 +526,6 @@ img {
   
 
   display: flex;
-
   
 }
 

@@ -155,6 +155,9 @@ img {
   padding-bottom: 24px;
 
   position: relative;
+
+  transition-property: color;
+  transition-duration: 500ms;
 }
 
 .nav-link.current::after {
@@ -179,6 +182,9 @@ img {
   padding-bottom: 24px;
 
   color: var(--auth-link-color);
+
+  transition-property: color;
+  transition-duration: 500ms;
 }
 
 .nav-link:hover,
@@ -236,6 +242,9 @@ img {
     ),
     url(../images/hero-img.jpeg);
   padding: 188px 0;
+
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .title.hero {
@@ -305,11 +314,10 @@ img {
   align-items: center;
 
   border: 1px solid #8e8f99;
-border-radius: 4px;
-background-color: var(--features-icon-bgc);
+  border-radius: 4px;
+  background-color: var(--features-icon-bgc);
 
-margin-bottom: 8px;
-
+  margin-bottom: 8px;
 }
 
 .icon-antenna {
@@ -355,10 +363,6 @@ margin-bottom: 8px;
 .team-social-list {
   display: flex;
   justify-content: center;
-  gap: 10px;
-}
-
-.team-social-item {
   gap: 24px;
 }
 
@@ -413,6 +417,47 @@ margin-bottom: 8px;
   padding: 32px 16px;
 }
 
+/* portfolio overlay */
+
+.portfolio-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 360px;
+  height: 300px;
+
+  transform: translatey(100%);
+  transition: transform 250ms ease-in-out;
+
+  background: #4d5ae5;
+
+  color: #f4f4fd;
+  padding-top: 40px;
+  padding-right: 32px;
+  padding-left: 32px;
+}
+
+.portfolio-hover:hover .portfolio-overlay {
+  transform: translatey(0);
+}
+
+.portfolio-hover {
+  display: block;
+}
+
+.portfolio-hover:hover,
+.portfolio-hover:focus {
+  border-bottom: 1px solid #e7e9fc;
+  border-left: 1px solid #e7e9fc;
+  border-right: 1px solid #e7e9fc;
+}
+
 /* footer */
 
 .footer {
@@ -448,4 +493,37 @@ margin-bottom: 8px;
 
 .footer-social {
   margin-left: 120px;
+}
+
+.footer-social-title {
+  margin-bottom: 16px;
+}
+
+.footer-social-list {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.footer-social-link {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-color: var(--team-social-link-color);
+  border-radius: 50%;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-social-icon {
+  width: 16px;
+  height: 16px;
+  fill: var(--team-social-fill);
+  background-repeat: no-repeat;
+
+  justify-content: center;
+  align-items: center;
 }

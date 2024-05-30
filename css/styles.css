@@ -350,7 +350,8 @@ img {
 .team-item {
   background-color: var(--team-card-bgc);
   border-radius: 0 0 4px 4px;
-  width: 264px;
+  /* width: 264px; */
+  width: calc((100% - 72) / 4);
 
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
@@ -554,3 +555,38 @@ justify-content: center;
   justify-content: center;
   align-items: center;
 }
+
+
+/* modal */
+
+/* .modal-overlay{
+  background-color: rgba(124, 110, 108, 0.391);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 250ms ease-in-out;
+}
+
+.modal-overlay.is-open{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal{
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 16px;
+  box-shadow:0 2px 4px rgba(46, 47, 66, 0.08);
+  width: 480px;
+  max-height: 80%;
+  overflow-y: auto;
+} */
